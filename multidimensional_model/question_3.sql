@@ -1,7 +1,10 @@
+CREATE OR REPLACE VIEW mydb.view_revenue AS
 SELECT
-	d_ord_dtl.OrderID,
-    SUM(d_ord_dtl.UnitPrice * d_ord_dtl.Quantity) AS total_revenue
-FROM `DB`.`FactOrder` AS f_ord
-INNER JOIN `DB`.`DimOrderDetail` AS d_ord_dtl USING(OrderID)
-GROUP BY f_ord.OrderID
-ORDER BY f_ord.OrderDate;
+	dw_ord.OrderID AS order_id,
+    SUM(dw_ord_dtl.UnitPrice * dw_ord_dtl.Quantity) AS total_revenue
+FROM mydb.dw_order AS dw_ord
+INNER JOIN mydb.dw_order_detail AS dw_ord_dtl USING(DT_REFE, OrderID)
+GROUP BY dw_ord.OrderID
+ORDER BY total_revenue DESC;
+
+SELECT * FROM mydb.view_revenue;
