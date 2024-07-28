@@ -20,5 +20,5 @@ SELECT
 FROM mydb.view_advance_ship_rate_in_days;
 
 SELECT * FROM mydb.view_advance_ship_rate_in_days;
-SELECT * FROM mydb.view_advance_ship_rate_in_days_percentiles;
 SELECT * FROM mydb.view_advance_ship_rate_in_days_mean_and_std;
+SELECT * FROM mydb.view_advance_ship_rate_in_days_percentiles;
