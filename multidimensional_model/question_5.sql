@@ -10,8 +10,6 @@ FROM mydb.dw_order AS dw_ord
 GROUP BY dw_dlv.Country
 ORDER BY SUM(dw_ord_dtl.UnitPrice * dw_ord_dtl.Quantity) DESC;
 
-SELECT * FROM mydb.view_delivery_revenue_per_country;
-
 CREATE OR REPLACE VIEW mydb.view_delivery_revenue_per_city AS
 SELECT
 	dw_dlv.Country AS country,
@@ -26,3 +24,4 @@ GROUP BY dw_dlv.Country, dw_dlv.City
 ORDER BY SUM(dw_ord_dtl.UnitPrice * dw_ord_dtl.Quantity) DESC;
 
 SELECT * FROM mydb.view_delivery_revenue_per_city;
+SELECT * FROM mydb.view_delivery_revenue_per_country;
