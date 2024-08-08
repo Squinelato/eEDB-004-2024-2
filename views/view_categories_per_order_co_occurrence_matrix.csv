@@ -1,0 +1,9 @@
+Category,Beverages,Condiments,Confections,"Dairy Products",Grains/Cereals,Meat/Poultry,Produce,Seafood
+Beverages,0,77,119,110,63,58,51,105
+Condiments,77,0,66,60,34,32,29,50
+Confections,119,66,0,94,60,47,41,85
+"Dairy Products",110,60,94,0,53,41,35,92
+Grains/Cereals,63,34,60,53,0,24,23,62
+Meat/Poultry,58,32,47,41,24,0,23,53
+Produce,51,29,41,35,23,23,0,34
+Seafood,105,50,85,92,62,53,34,0
